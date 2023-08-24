@@ -1,0 +1,476 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+    font-family: 'centuryBold';
+    src: url(fonts/GOTHICB.TTF);
+}
+
+@font-face {
+    font-family: 'centuryRegular';
+    src: url(fonts/CenturyGothic.ttf);
+}
+
+@font-face {
+    font-family: 'myriadPro';
+    src: url(fonts/MYRIADPRO-REGULAR.OTF);
+}
+
+.header {
+    width: 100%;
+    min-height: 4.375rem;
+    background-color: #efe3d9;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+}
+
+.header__logo {
+    font-family: 'centuryBold';
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: #544843;
+}
+
+.header__logo:visited {
+    color: #544843;
+}
+
+.header__logo:active {
+    color: #544843;
+}
+
+.header__navigacija {
+    display: flex;
+    gap: 4rem;
+}
+
+.header__link {
+    font-family: 'centuryRegular';
+    font-size: 1.4rem;
+    color: #544843;
+    text-decoration: none;
+    padding: .5rem;
+    border-radius: 1rem;
+    transition: all .5s ease;
+}
+
+.header__link:visited {
+    color: #544843;
+}
+
+.header__link:active {
+    color: #544843;
+}
+
+.header__link:hover {
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .header__logo {
+        font-size: 5rem;
+    }
+
+    .header__navigacija {
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .header__link {
+        text-align: center;
+        width: 100%;
+        padding: 1.5rem 0;
+        border-radius: 0;
+    }
+}
+
+/* MAIN */
+
+.main {
+    width: 100%;
+    min-height: 39rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(slike/banner.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 2rem 0;
+}
+
+.main__tekst {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(147, 123, 108, .5);
+    padding: 2rem;
+}
+
+.main__naslov {
+    text-align: center;
+    font-family: 'centuryBold';
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    max-width: 68rem;
+}
+
+.main__paragraf {
+    max-width: 30rem;
+    text-align: center;
+    font-family: 'myriadPro';
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .main__naslov {
+        font-size: 3rem;
+    }
+    
+}
+
+/* PROIZVODI */
+
+.proizvodi {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #e5cdb9;
+    padding: 2rem 0;
+}
+
+.proizvodi__naslov1 {
+    font-family: 'centuryRegular';
+    font-size: .75rem;
+    color: #544843;
+}
+
+.proizvodi__naslov2 {
+    font-family: 'centuryRegular';
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    color: #544843;
+}
+
+.proizvodi__kartice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.proizvodi__kartica {
+    display: flex;
+    gap: 2rem;
+    background-color: #937b6c;
+    padding: 2rem 0;
+    padding-left: 1rem;
+    padding-right: 5rem;
+}
+
+.proizvodi__kartica-slika {
+    width: 15rem;
+}
+
+.proizvodi__kartica-tekst {
+    text-align: left;
+    width: 15rem;
+}
+
+.proizvodi__kartica-naslov {
+    font-family: 'centuryRegular';
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.proizvodi__kartica-paragraf {
+    font-family: 'myriadPro';
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: white;
+}
+
+@media screen and (max-width: 1280px) {
+    .proizvodi__naslov1 {
+        font-size: 1rem;
+    }
+
+    .proizvodi__naslov2 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .proizvodi__kartice {
+        flex-direction: column;
+    }
+
+    .proizvodi__kartica {
+        padding: 2rem 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .proizvodi__kartica {
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+}
+
+/* GALERIJA */
+
+.galerija {
+    text-align: center;
+    width: 100%;
+    min-height: 45rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.galerija__naslov {
+    font-family: 'centuryRegular';
+    font-size: 2.3rem;
+    padding: 1.3rem 0;
+    width: 100%;
+    background-color: #efe3d9;
+    color: #544843;
+}
+
+.galerija__kardigani {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    gap: 1.45rem;
+    margin: 2rem 0;
+}
+
+.galerija__kardigan {
+    cursor: pointer;
+    transition: transform .1s ease;
+}
+
+.galerija__kardigan:hover {
+    transform: scale(1.1);
+}
+
+.galerija__kardigan p {
+    font-family: 'myriadPro';
+    color: #937b6c;
+}
+
+.galerija__kardigan-slika {
+    width: 18rem;
+}
+
+.galerija__vuna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.galerija__klupko {
+    cursor: pointer;
+    transition: transform .1s ease;
+}
+
+.galerija__klupko:hover {
+    transform: scale(1.1);
+}
+
+.galerija__klupko p {
+    font-family: 'myriadPro';
+    color: #937b6c;
+}
+
+.galerija__klupko-slika {
+    width: 10rem;
+}
+
+/* KONTAKT */
+
+.kontakt {
+    width: 100%;
+    min-height: 23.2rem;
+    margin: 0 auto;
+    background-color: #efe3d9;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem 0;
+}
+
+.kontakt__krug {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.kontakt__container {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+.kontakt__naslov {
+    font-family: 'centuryRegular';
+    font-size: 2.2rem;
+    color: #544843;
+    margin-bottom: 1.5rem;
+}
+
+.kontakt__paragraf {
+    font-family: 'myriadPro';
+    font-size: 1rem;
+    color: #544843;
+}
+
+.kontakt__primer {
+    font-family: 'myriadPro';
+    font-size: .8rem;
+    color: #937b6c;
+    margin-bottom: 1rem;
+}
+
+.kontakt__forma {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    gap: .8rem;
+}
+
+.kontakt__forma input[type="text"] {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: .8rem;
+    text-align: center;
+    font-size: .9rem;
+    font-family: 'centuryRegular';
+}
+
+.kontakt__forma input[type="submit"] {
+    width: 30%;
+    margin: 0 auto;
+    border: none;
+    background-color: white;
+    padding: .2rem;
+    border-radius: 1rem;
+    font-family: 'myriadPro';
+    color: #544843;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.kontakt__forma input[type="submit"]:hover {
+    background-color: #937b6c;
+    color: white;
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .kontakt {
+        min-height: 25rem;
+    }
+
+    .kontakt__naslov {
+        font-size: 1.5rem;
+    }
+    
+    .kontakt__krug {
+        width: 42rem;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    min-height: 6.5rem;
+    margin: 0 auto;
+    background-color: #937b6c;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo {
+    font-family: 'centuryBold';
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.footer__logo span {
+    font-size: .8rem;
+}
+
+.footer__logo:visited {
+    color: white;
+}
+
+.footer__logo:active {
+    color: white;
+}
+
+.footer__social {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .footer__logo {
+        font-size: 4rem;
+    }
+
+    .footer__logo span {
+        font-size: 1rem;
+    }
+
+    .footer__social {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
